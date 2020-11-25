@@ -1,14 +1,3 @@
-/*Zsuzsa*/
-$primary-color: #00DBDC; 
-$secondary-color: #F8FF81;
-$red: #D42000;
-$indigo: #004E5D; /*for p tags*/
-$gray: #909090; /*Lorem ipsum részlet a képek alatt*/
-
-/*body{
-    background-color: $primary-color;
-} hogy lássátok a logot addig kikommentelem*/
-=======
 @use 'color';
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
@@ -21,24 +10,24 @@ body {
     background-size: 1200px;
     background-repeat: no-repeat;
     background-position: top;
-    background-color: color.$mainBackground;
+    background-color: color.$primaryBackground;
 }
 
 h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
-    color: color.$mainBlue;
+    color: color.$primaryBlue;
 }
 p {
     font-family: "Open Sans", sans-serif;
-    color: color.$mainBlue;
+    color: color.$primaryBlue;
 }
 .img-text {
     color: color.$imgText;
 }
 
 .main-container {
-    border: 8px solid color.$mainBlue;
+    border: 10px solid color.$primaryBlue;
     display: grid;
     margin: auto;
     max-width: 1200px;
@@ -58,9 +47,14 @@ p {
 
 .navbar {
     grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .header {
     grid-area: head;
+    max-width: 1200px;
+    margin: auto;
 }
 .text-first {
     grid-area: text1;
@@ -101,7 +95,7 @@ p {
 
 #text-1 {
     span {
-        color: color.$mainBlue;
+        color: color.$primaryBlue;
         margin-right: 5px;
         padding: 0;
         font-family: "Montserrat", sans-serif;
@@ -111,3 +105,29 @@ p {
     }
 }
 
+#btn-logo {
+    width: 70px;
+}
+
+#header-1 {
+    max-width: 300px;
+}
+
+#header-2 p {
+    color: color.$primaryRed;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    background-color: color.$primaryBlue;
+    padding: 12px;
+    font-size: 30px;
+    letter-spacing: 1.2px;
+}
+
+#btn-wrap {
+    max-width: 40px;
+}
+#logo-container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
