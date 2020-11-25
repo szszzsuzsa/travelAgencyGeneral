@@ -1,3 +1,4 @@
+/*Zsuzsa*/
 $primary-color: #00DBDC; 
 $secondary-color: #F8FF81;
 $red: #D42000;
@@ -7,3 +8,106 @@ $gray: #909090; /*Lorem ipsum részlet a képek alatt*/
 /*body{
     background-color: $primary-color;
 } hogy lássátok a logot addig kikommentelem*/
+=======
+@use 'color';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(/img/top-background.png);
+    background-size: 1200px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: color.$mainBackground;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    color: color.$mainBlue;
+}
+p {
+    font-family: "Open Sans", sans-serif;
+    color: color.$mainBlue;
+}
+.img-text {
+    color: color.$imgText;
+}
+
+.main-container {
+    border: 8px solid color.$mainBlue;
+    display: grid;
+    margin: auto;
+    max-width: 1200px;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 20px;
+    grid-template-areas:
+        "nav nav nav"
+        "head head head"
+        "rightp1 text1 leftp1"
+        "img1 img1 img1"
+        "rightp2 text2 leftp2"
+        "img2 img2 img2"
+        "rightp3 text3 leftp3"
+        "img3 img3 img3";
+}
+
+.navbar {
+    grid-area: nav;
+}
+.header {
+    grid-area: head;
+}
+.text-first {
+    grid-area: text1;
+}
+.img-first {
+    grid-area: img1;
+}
+.text-second {
+    grid-area: text2;
+}
+.img-second {
+    grid-area: img2;
+}
+.text-third {
+    grid-area: text3;
+}
+.img-third {
+    grid-area: img3;
+}
+.right-placeholder-1 {
+    grid-area: rightp1;
+}
+.left-placeholder-1 {
+    grid-area: leftp1;
+}
+.right-placeholder-2 {
+    grid-area: rightp2;
+}
+.left-placeholder-2 {
+    grid-area: leftp2;
+}
+.right-placeholder-3 {
+    grid-area: rightp3;
+}
+.left-placeholder-3 {
+    grid-area: leftp3;
+}
+
+#text-1 {
+    span {
+        color: color.$mainBlue;
+        margin-right: 5px;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        font-size: 36px;
+        float: left;
+    }
+}
+

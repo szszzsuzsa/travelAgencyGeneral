@@ -1,8 +1,17 @@
-@charset "UTF-8";
-/*for p tags*/
-/*Lorem ipsum részlet a képek alatt*/
-/*body{
-    background-color: $primary-color;
-} hogy lássátok a logot addig kikommentelem*/
+/* Error: expected "{".
+ *    ,
+ * 12 | @use 'color';
+ *    |             ^
+ *    '
+ *   src\style.scss 12:13  root stylesheet */
 
-/*# sourceMappingURL=style.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected \"{\".\a    \2577 \a 12 \2502  @use 'color';\d\a    \2502              ^\a    \2575 \a   src\\style.scss 12:13  root stylesheet";
+}
