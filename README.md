@@ -58,3 +58,5 @@ These are important properties to be as precise as it's expected, mostly if you 
 - <i class="far fa-exclamation"></i> [Creating texts](https://helpx.adobe.com/hu/illustrator/how-to/text-basics.html)
 - <i class="far fa-exclamation"></i> [Drawing](https://helpx.adobe.com/illustrator/using/drawing-basics.html)
 - <i class="far fa-exclamation"></i> [Modifying paths](https://helpx.adobe.com/illustrator/using/editing-paths.html)
+
+
