@@ -1,64 +1,60 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-/*Lorem ipsum részlet a képek alatt*/
-/*for p tags*/
 html,
 body {
   padding: 0;
   margin: 0;
-  background-image: url(/img/top-background.png);
-  background-size: 1200px;
-  background-repeat: no-repeat;
-  background-position: top;
   background-color: #f8ffb8;
-}
-
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  color: #00dbdc;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
-  color: #00dbdc;
 }
 
 .img-text {
   color: #777777;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 0 60px 20px;
 }
 
 .main-container {
+  background-image: url(/img/topPic.jpg);
+  background-size: 1287px;
+  background-repeat: no-repeat;
+  background-position: top;
   border: 10px solid #00dbdc;
   display: grid;
   margin: auto;
-  max-width: 1200px;
+  max-width: 1280px;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: repeat(8, auto);
-  grid-gap: 20px;
-  grid-template-areas: "nav nav nav" "head head head" "rightp1 text1 leftp1" "img1 img1 img1" "rightp2 text2 leftp2" "img2 img2 img2" "rightp3 text3 leftp3" "img3 img3 img3";
+  grid-template-areas: "nav nav nav" "head head head" "text1 text1 leftp1" "img1 img1 img1" "rightp2 text2 leftp2" "img2 img2 img2" "rightp3 text3 leftp3" "img3 img3 img3";
 }
 
 .navbar {
+  max-width: 1280px;
   grid-area: nav;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .header {
+  flex-direction: column;
   grid-area: head;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .text-first {
   grid-area: text1;
+  display: flex;
+  margin-top: 100px;
+  margin-left: 127px;
 }
 
 .img-first {
   grid-area: img1;
+}
+.img-first img {
+  width: 100%;
 }
 
 .text-second {
@@ -67,6 +63,10 @@ p {
 
 .img-second {
   grid-area: img2;
+  margin-top: 71px;
+}
+.img-second img {
+  width: 100%;
 }
 
 .text-third {
@@ -76,9 +76,13 @@ p {
 .img-third {
   grid-area: img3;
 }
+.img-third img {
+  width: 100%;
+}
 
 .right-placeholder-1 {
   grid-area: rightp1;
+  width: 100px;
 }
 
 .left-placeholder-1 {
@@ -101,42 +105,96 @@ p {
   grid-area: leftp3;
 }
 
+.p-1 {
+  font-size: 48px;
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: #00dbdc;
+}
+
+.p-2 {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: #004e5d;
+  line-height: 45px;
+}
+
 #text-1 span {
   color: #00dbdc;
   margin-right: 5px;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 36px;
+  font-size: 72px;
   float: left;
 }
 
-#btn-logo {
-  width: 70px;
+#top-pic1-text {
+  width: 700px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+
+#tree-icon {
+  margin-top: 36px;
 }
 
 #header-1 {
-  max-width: 300px;
+  margin-top: 148px;
+  margin-bottom: 52px;
 }
 
 #header-2 p {
+  margin: 0 0 57px 0;
   color: #d42000;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   background-color: #00dbdc;
   padding: 12px;
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 1.2px;
 }
 
 #btn-wrap {
-  max-width: 40px;
+  width: 30px;
+  height: 30px;
+  padding-top: 12px;
+  padding-right: 16px;
 }
 
 #logo-container {
-  width: 1200px;
+  max-width: 1280px;
   display: flex;
   justify-content: space-between;
+}
+
+#group-1:hover:first-child {
+  fill: black !important;
+}
+
+@media screen and (max-width: 1040px) {
+  .main-container {
+    border: 10px solid #00dbdc;
+    display: grid;
+    margin: auto;
+    max-width: 1280px;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "nav nav nav" "head head head" "text1 text1 text1" "img1 img1 img1" "rightp2 text2 leftp2" "img2 img2 img2" "rightp3 text3 leftp3" "img3 img3 img3";
+  }
+
+  #tree-icon {
+    display: none;
+  }
+
+  .text-first {
+    max-width: 1280px;
+    grid-area: text1;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
