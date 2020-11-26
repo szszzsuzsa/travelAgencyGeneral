@@ -194,8 +194,8 @@ body {
   .text-first {
     grid-area: text1;
     margin-top: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .p-1 {
@@ -204,6 +204,20 @@ body {
     font-weight: 800;
     color: #00dbdc;
   }
+}
+.color-1:hover {
+  fill: #00dcdc94;
+  cursor: pointer;
+}
+
+.color-3:hover {
+  fill: #00dcdc94;
+  cursor: pointer;
+}
+
+.color-14:hover {
+  fill: #00dcdc94;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

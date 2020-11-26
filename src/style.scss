@@ -18,37 +18,37 @@ body {
     margin: 10px 0 60px 20px;
 }
 @media screen and (min-width: 1000px) {
-.main-container {
-    background-image: url(/img/topPic.jpg);
-    background-size: 1287px;
-    background-repeat: no-repeat;
-    background-position: top;
-    border: 10px solid color.$primaryBlue;
-    display: grid;
-    margin: auto;
-    max-width: 1280px;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: repeat(8, auto);
+    .main-container {
+        background-image: url(/img/topPic.jpg);
+        background-size: 1287px;
+        background-repeat: no-repeat;
+        background-position: top;
+        border: 10px solid color.$primaryBlue;
+        display: grid;
+        margin: auto;
+        max-width: 1280px;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: repeat(8, auto);
 
-    grid-template-areas:
-        "nav nav nav"
-        "head head head"
-        "text1 text1 leftp1"
-        "img1 img1 img1"
-        "rightp2 text2 leftp2"
-        "img2 img2 img2"
-        "rightp3 text3 leftp3"
-        "img3 img3 img3";
-}
-.text-first {
-    grid-area: text1;
-    display: flex;
-    margin-top: 100px;
-    margin-left: 127px;
-}
-.p-1 {
-    @include mainTitle(48px, "Montserrat", 800, color.$primaryBlue);
-}
+        grid-template-areas:
+            "nav nav nav"
+            "head head head"
+            "text1 text1 leftp1"
+            "img1 img1 img1"
+            "rightp2 text2 leftp2"
+            "img2 img2 img2"
+            "rightp3 text3 leftp3"
+            "img3 img3 img3";
+    }
+    .text-first {
+        grid-area: text1;
+        display: flex;
+        margin-top: 100px;
+        margin-left: 127px;
+    }
+    .p-1 {
+        @include mainTitle(48px, "Montserrat", 800, color.$primaryBlue);
+    }
 }
 .navbar {
     max-width: 1280px;
@@ -108,8 +108,6 @@ body {
 .left-placeholder-3 {
     grid-area: leftp3;
 }
-
-
 
 .p-2 {
     @include secondaryTitle(18px, "Open Sans", color.$indigo, 45px);
@@ -177,7 +175,7 @@ body {
         border: 10px solid color.$primaryBlue;
         display: grid;
         margin: auto;
-     
+
         grid-template-columns: 25% 50% 25%;
         grid-template-rows: repeat(8, auto);
 
@@ -194,13 +192,27 @@ body {
     #tree-icon {
         display: none;
     }
-    .text-first {      
-        grid-area: text1;       
+    .text-first {
+        grid-area: text1;
         margin-top: 100px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .p-1 {
         @include mainTitle(36px, "Montserrat", 800, color.$primaryBlue);
     }
+}
+
+//hover effectek a gombokon
+.color-1:hover {
+    fill: #00dcdc94;
+    cursor: pointer;
+}
+.color-3:hover {
+    fill: #00dcdc94;
+    cursor: pointer;
+}
+.color-14:hover {
+    fill: #00dcdc94;
+    cursor: pointer;
 }
