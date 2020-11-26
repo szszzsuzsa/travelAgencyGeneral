@@ -17,7 +17,7 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 10px 0 60px 20px;
 }
-
+@media screen and (min-width: 1000px) {
 .main-container {
     background-image: url(/img/topPic.jpg);
     background-size: 1287px;
@@ -40,7 +40,16 @@ body {
         "rightp3 text3 leftp3"
         "img3 img3 img3";
 }
-
+.text-first {
+    grid-area: text1;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 127px;
+}
+.p-1 {
+    @include mainTitle(48px, "Montserrat", 800, color.$primaryBlue);
+}
+}
 .navbar {
     max-width: 1280px;
     grid-area: nav;
@@ -54,12 +63,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-.text-first {
-    grid-area: text1;
-    display: flex;
-    margin-top: 100px;
-    margin-left: 127px;
-}
+
 .img-first {
     grid-area: img1;
     img {
@@ -105,9 +109,7 @@ body {
     grid-area: leftp3;
 }
 
-.p-1 {
-    @include mainTitle(48px, "Montserrat", 800, color.$primaryBlue);
-}
+
 
 .p-2 {
     @include secondaryTitle(18px, "Open Sans", color.$indigo, 45px);
@@ -125,7 +127,7 @@ body {
     }
 }
 #top-pic1-text {
-    width: 700px;
+    max-width: 700px;
     margin-top: 55px;
     margin-bottom: 55px;
 }
@@ -166,12 +168,16 @@ body {
         fill: black !important;
     }
 }
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1000px) {
     .main-container {
+        background-image: url(/img/topPic.jpg);
+        background-size: 1287px;
+        background-repeat: no-repeat;
+        background-position: top;
         border: 10px solid color.$primaryBlue;
         display: grid;
         margin: auto;
-        max-width: 1280px;
+     
         grid-template-columns: 25% 50% 25%;
         grid-template-rows: repeat(8, auto);
 
@@ -188,12 +194,13 @@ body {
     #tree-icon {
         display: none;
     }
-    .text-first {
-        max-width: 1280px;
-        grid-area: text1;
-        display: flex;
+    .text-first {      
+        grid-area: text1;       
         margin-top: 100px;
         margin-left: 10px;
         margin-right: 10px;
+    }
+    .p-1 {
+        @include mainTitle(36px, "Montserrat", 800, color.$primaryBlue);
     }
 }

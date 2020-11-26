@@ -14,20 +14,35 @@ body {
   margin: 10px 0 60px 20px;
 }
 
-.main-container {
-  background-image: url(/img/topPic.jpg);
-  background-size: 1287px;
-  background-repeat: no-repeat;
-  background-position: top;
-  border: 10px solid #00dbdc;
-  display: grid;
-  margin: auto;
-  max-width: 1280px;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-rows: repeat(8, auto);
-  grid-template-areas: "nav nav nav" "head head head" "text1 text1 leftp1" "img1 img1 img1" "rightp2 text2 leftp2" "img2 img2 img2" "rightp3 text3 leftp3" "img3 img3 img3";
-}
+@media screen and (min-width: 1000px) {
+  .main-container {
+    background-image: url(/img/topPic.jpg);
+    background-size: 1287px;
+    background-repeat: no-repeat;
+    background-position: top;
+    border: 10px solid #00dbdc;
+    display: grid;
+    margin: auto;
+    max-width: 1280px;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "nav nav nav" "head head head" "text1 text1 leftp1" "img1 img1 img1" "rightp2 text2 leftp2" "img2 img2 img2" "rightp3 text3 leftp3" "img3 img3 img3";
+  }
 
+  .text-first {
+    grid-area: text1;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 127px;
+  }
+
+  .p-1 {
+    font-size: 48px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    color: #00dbdc;
+  }
+}
 .navbar {
   max-width: 1280px;
   grid-area: nav;
@@ -41,13 +56,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.text-first {
-  grid-area: text1;
-  display: flex;
-  margin-top: 100px;
-  margin-left: 127px;
 }
 
 .img-first {
@@ -105,13 +113,6 @@ body {
   grid-area: leftp3;
 }
 
-.p-1 {
-  font-size: 48px;
-  font-family: "Montserrat";
-  font-weight: 800;
-  color: #00dbdc;
-}
-
 .p-2 {
   font-size: 18px;
   font-family: "Open Sans";
@@ -130,7 +131,7 @@ body {
 }
 
 #top-pic1-text {
-  width: 700px;
+  max-width: 700px;
   margin-top: 55px;
   margin-bottom: 55px;
 }
@@ -172,12 +173,15 @@ body {
   fill: black !important;
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1000px) {
   .main-container {
+    background-image: url(/img/topPic.jpg);
+    background-size: 1287px;
+    background-repeat: no-repeat;
+    background-position: top;
     border: 10px solid #00dbdc;
     display: grid;
     margin: auto;
-    max-width: 1280px;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: repeat(8, auto);
     grid-template-areas: "nav nav nav" "head head head" "text1 text1 text1" "img1 img1 img1" "rightp2 text2 leftp2" "img2 img2 img2" "rightp3 text3 leftp3" "img3 img3 img3";
@@ -188,12 +192,17 @@ body {
   }
 
   .text-first {
-    max-width: 1280px;
     grid-area: text1;
-    display: flex;
     margin-top: 100px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .p-1 {
+    font-size: 36px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    color: #00dbdc;
   }
 }
 
