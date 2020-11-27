@@ -184,7 +184,7 @@ body {
     margin: auto;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: repeat(8, auto);
-    grid-template-areas: "nav nav nav" "head head head" "text1 text1 text1" "img1 img1 img1" "rightp2 text2 leftp2" "img2 img2 img2" "rightp3 text3 leftp3" "img3 img3 img3";
+    grid-template-areas: "nav nav nav" "head head head" "text1 text1 text1" "img1 img1 img1" "text2 text2 text2" "img2 img2 img2" "text3 text3 text3" "img3 img3 img3";
   }
 
   #tree-icon {
@@ -194,6 +194,18 @@ body {
   .text-first {
     grid-area: text1;
     margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .text-second {
+    grid-area: text2;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .text-third {
+    grid-area: text3;
     margin-left: 20px;
     margin-right: 20px;
   }
